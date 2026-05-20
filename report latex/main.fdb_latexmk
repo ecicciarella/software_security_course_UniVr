@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779311423.58256 "c:/Users/Enrico/Desktop/Enrico/UniVr/Magistrale/Sicurezza Software/software_security_course_UniVr/report latex/main.tex" "main.pdf" "main" 1779311424.29274 0
+["pdflatex"] 1779312477.83111 "c:/Users/Enrico/Desktop/Enrico/UniVr/Magistrale/Sicurezza Software/software_security_course_UniVr/report latex/main.tex" "main.pdf" "main" 1779312478.32898 0
   "C:/Users/Enrico/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779303648 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Enrico/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1779300005 25420 293c9c4cbdd302d56df512db7c248f48 ""
   "C:/Users/Enrico/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1779303510 40136 fbcf21e84c00acb60e3a8ff7d78b1e69 ""
@@ -76,16 +76,16 @@
   "C:/Users/Enrico/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "C:/Users/Enrico/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/Enrico/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "architetture_moderne.tex" 1779311423 4683 99ea5aa8d8997cf4aae9d22cdc72d159 ""
+  "architetture_moderne.tex" 1779312477 4639 dbf23ccdb695c6c9f3e9333f49eb5888 ""
   "c:/Users/Enrico/Desktop/Enrico/UniVr/Magistrale/Sicurezza Software/software_security_course_UniVr/report latex/main.tex" 1779304785 602 585cb8d016c86ec46b20640391c88ed5 ""
-  "crittografia_white_box.tex" 1779305445 6146 00bde8ed935910dd46b70c9ee6610f0c ""
+  "crittografia_white_box.tex" 1779312166 6139 76727eed7e6099873afbc8332870286b ""
   "fault_injection.tex" 1779303813 26 c7e72baa994f069a3aaf8b4e8354a390 ""
-  "fonti.tex" 1779311258 1034 b3548b1a3530d63c1c8fbb42f838f958 ""
+  "fonti.tex" 1779312066 1032 5d8f122a32f7739e1b0c8cdc975ed58b ""
   "introduzione.tex" 1779303822 730 6c03356fc57e9528ea8045ef4e1473bf ""
-  "main.aux" 1779311424 1790 409a8ba7c2e43d38c3501ff2d4e6a360 "pdflatex"
-  "main.out" 1779311424 862 53e6889e7fcc303f27dea9a196c922f3 "pdflatex"
+  "main.aux" 1779312478 1790 409a8ba7c2e43d38c3501ff2d4e6a360 "pdflatex"
+  "main.out" 1779312478 862 53e6889e7fcc303f27dea9a196c922f3 "pdflatex"
   "main.tex" 1779304785 602 585cb8d016c86ec46b20640391c88ed5 ""
-  "main.toc" 1779311424 884 1fc0ad45f9bc20102a26d123e91bb46d "pdflatex"
+  "main.toc" 1779312478 884 1fc0ad45f9bc20102a26d123e91bb46d "pdflatex"
   "memory_corruption.tex" 1779303841 28 92b14d46a9585ee0551d15f60a0c80f4 ""
   (generated)
   "main.aux"
