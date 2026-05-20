@@ -3,4 +3,28 @@ Riguardo l'analisi delle architetture moderne, ovvero quelle che caratterizzano 
 I riferimenti di questa sezione provengono richiamano principalmente alla letteratura generica, con un focus particolare sul documento  \hyperref[fonte:ps5]{\emph{``Next-Gen Exploitation: Exploring the PS5 Security Landscape''}} [\ref{fonte:ps5}] 
 redatto da SpecterDev, un ricercatore di sicurezza specializzato in kernel exploitation e virtualizzazione, con focus su Android e Linux~[\ref{fonte:specterdev}] e che si occupa di sicurezza delle console come attività secondaria dal 2020, 
 con particolare attenzione all'hypervisor di PlayStation~5.\\
+Abbiamo estrapolato dal documento solo alcune delle tecniche difensive adottate da questa nuova console, esposte nei seguenti paragrafi.
 
+\paragraph{XOM e kCFI come ostacolo all'analisi del codice}
+Il kernel implementa anche il software \textit{Control Flow Integrity} (da cui kCFI), che ostacola l'analisi del \textit{Control Flow Graph}.\\
+Al contempo, l'utilizzo della XOM -- \textit{eXecute-Only Memory} -- mitiga la \textit{Return Oriented Programming} rendendo più complesso trovare i \textbf{gadget}, piccoli pezzi di codice che terminano ognuno con un'istruzione \texttt{ret} e che, 
+se concatenati, potrebbero portare alla costruzione di operazioni arbitrarie senza mai scrivere nuovo codice. La XOM ostacola sia l'analisi statica (il codice non può essere letto) sia quella dinamica (non si può copiare il binario a \textit{runtime}).
+I gadget richiedono quindi un attacco \textbf{brute force} per essere recuperati.\\
+La XOM, inoltre, non può essere disabilitata con \textit{kernel R/W} arbitrarie poiché le \textit{Nested Page Tables} -- che mappano gli indirizzi virtuali a quelli fisici della RAM -- non sono accessibili direttamente; la zona proibita è definita dall'\textbf{hypervisor} e non dal kernel.
+
+\paragraph{L'hypervisor AMD SVM come environment checker}
+L'hypervisor di PlayStation~5 è un monitor di sicurezza che intercetta le azioni sensibili del kernel guest. Sfrutta l'AMD SVM (\textit{AMD Secure Virtualization}), la tecnologia AMD per la virtualizzazione dell'hardware-backend, 
+per dare vita ad una vera e propria \textit{Virtualization-Based security} per le console.\\
+Ogni volta che il kernel tenta di eseguire una azione sensibile, l'hardware genera un \texttt{VMEXIT}: interrompe l'esecuzione e passa il controllo all'hypervisor, che decide se l'operazione è lecita.
+Si assicura che il kernel non possa disabilitare componenti di sicurezza essenziali (ad esempio modificando i bit relativi a \textit{Write Protect} [WP], \textit{Supervisor Mode Access Protection} [SMAP] o \textit{Supervisor Mode Execution Protection} [SMEP]) o modificando i \textit{Model-Specific Registers} [MSR].
+
+\paragraph{Isolamento crittografico nel co-processore sicuro}
+Su PlayStation~5 le applicazioni e le librerie sono \textbf{cifrate su disco}. I file si chiamano SELF e solo i co-processori sicuri (\texttt{MP0} di Sony e \texttt{MP3} di AMD PSP) ne possiedono le chiavi. Il kernel x86 fa da intermediario per le richieste di decifratura e verifica, ma non ha mai accesso diretto alle chiavi.\\
+Una grande differenza tra PlayStation~4 e PlayStation~5 è che sulla prima questa API del kernel poteva essere patchata, mentre sulla seconda l'hypervisor lo impedisce.
+
+\paragraph{PS4 vs PS5: evoluzione del modello di post-exploitation}
+In questa ultima sezione, abbiamo voluto evidenziare con un confronto diretto le maggiori differenze a livello di sicurezza tra PlayStation~5 e la sua antecedente PlayStation~4.\\
+Sulla vecchia PlayStation~4 le mitigazioni erano deboli, e spesso una \textit{kernel R/W} era sufficiente -- l'assenza di SMAP permetteva di costruire oggetti kernel falsi direttamente nello spazio utente e non c'era nemmeno bisogno di avere a che fare con la \textit{kernel Address Space Layout Randomization} [kASLR], 
+che mescola randomicamente la posizione in memoria del kernel ad ogni avvio, per non rendere noto il luogo in memoria fisso dove si trovano le strutture sensibili.\\
+Su PlayStation~5 gli unici attacchi possibili sono i \href{https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think}{\textit{data-only attacks}} (attacchi che non modificano il flusso di controllo del programma: l'attaccante sfrutta un bug di scrittura in memoria per corrompere dati, non codice~\hyperref[fonte:dataonly]{[\ref{fonte:dataonly}]}),
+e l'unico modo per accedere senza bug nell'hypervisor e tramite lo spoofing della mailbox PSP (che tuttavia l'autore non ha verificato).

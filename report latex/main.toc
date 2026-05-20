@@ -5,4 +5,8 @@
 \contentsline {section}{\numberline {3}Protezione della copia e crittografia White-Box}{1}{section.3}%
 \contentsline {section}{\numberline {4}Fault Injection}{3}{section.4}%
 \contentsline {section}{\numberline {5}Architetture Moderne}{3}{section.5}%
-\contentsline {section}{\numberline {6}Fonti}{3}{section.6}%
+\contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{3}{section*.2}%
+\contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{3}{section*.3}%
+\contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{3}{section*.4}%
+\contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{4}{section*.5}%
+\contentsline {section}{\numberline {6}Fonti}{4}{section.6}%
