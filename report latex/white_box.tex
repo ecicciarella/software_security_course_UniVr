@@ -1,4 +1,5 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -25,11 +26,26 @@ Analizziamo quindi lo stato dell'arte delle tecniche di difesa impiegati dalle p
 \paragraph{Crittografia White-Box}
 Il contesto storico è quello dei primi anni 2000 -- periodo in cui erano appena entrate in commercio console come xBox, GameCube e PlayStation 2. \\
 Come anticipato in introduzione, il modello \textit{MATE} assume in partenza che tutto ciò che si trova all'esterno del processore (RAM, bus di sistema, periferiche, \ldots) sia esposto e potenzialmente sotto il controllo dell'avversario.\\
-Il principio è lo stesso che giustifica la crittografia White-Box: chi esegue il programma è lo stesso che può attaccarlo. \\
-Il contributo di \textit{Weidong Shi, Hsien-Hsin S. Lee, Chenghuai Lu e Tao Zhang}, che esamina \textbf{Attacchi e analisi del rischio per i sistemi hardware a supporto della protezione dalla copia del software} cita .
+Il principio è lo stesso che giustifica la crittografia White-Box: chi esegue il programma è al contempo chi può attaccarlo. \\
+Il contributo di \textit{Weidong Shi, Hsien-Hsin S. Lee, Chenghuai Lu e Tao Zhang}, che esamina \textbf{Attacchi e analisi del rischio per i sistemi hardware a supporto della protezione dalla copia del software}\footnote{Titolo originale: Attacks and Risk Analysis for Hardware Supported
+Software Copy Protection Systems}, cita tra le principali tecniche di attacco hardware per soverchiare le difese sofware:
+\begin{itemize}
+    \item \textbf{Trace Analysis}: l'attaccante raccoglie informazioni del software protetto tramite \textit{logging} ed analizzando le tracce d'esecuzione dello stesso. Alcune primitive sono riconoscibili anche dopo essere state cifrate (ad esempio branch condizionali, indici e diversi tipi di variabili).
+    \item \textbf{Mod-chip}: con il termine \textit{mod-chip} gli autori si riferiscono ai dispositivi designati a mettere alla luce i meccanismi di protezione di copia. Possono anche essere destinati all'appropriazione del segnale di un altro dispositivo o a lanciare attacchi di spoofing ad altri dispositivi.
+    \item \textbf{Emulatori}: è complesso combattere gli attacchi di emulazione senza utilizzare cifratura; tuttavia, non è possibile parlare di protezione della copia del sofware se il suddetto può essere eseguito su un emulatore senza autorizzazione.
+\end{itemize}
+Scendendo ulteriormente nel dettaglio, gli autori analizzano anche altre tecniche di attacco:
+\begin{itemize}
+    \item Tra le \textbf{lazy authentication}\footnote{Con `lazy' ci si riferisce alla situazione nella quale la sorgente dei dati è utilizzata come un operando ed il risultato della computazione ottenuto utilizzando dati non autenticati è in grado di modificare lo stato del processore prima che l'integrità di 
+    tali dati sia confermata.} \textbf{ e le counter-mode encryption}\footnote{ La counter-mode encryption (\textit{CTR}) cifra blocchi di dimensione fissa cifrando un contatore intero ed eseguendone poi l'operazione di \textit{XOR} con il blocco di dati in questione. 
+    \textit{Fonte:} \href{https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation\%23Counter_\%28CTR\%29}{Block cipher mode of operation}}, troviamo ad esempio l'\textbf{attacco ATT}, ovvero \textit{''alter then trace attack''}, il quale prevede che l'attaccante sia in grado di modificare una parte del software 
+    (programma o dati) bit-per-bit, che le istruzioni alterate possano essere eseguite e l'integrità delle istruzioni eseguite o dei dati utilizzati non venga verificata tempestivamente né in modo rigoroso istruzione per istruzione.\\
+    Il rischio delle autenticazioni ''Lazy'' può essere ridotto utilizzando \textit{control flow/memory fetch address obfuscation} hardware, nonostante questo possa aumentare notevolmente l'overhead e la complessità dell'hardware stesso.
+    \item Il \textbf{Software slice}
+\end{itemize}
 \paragraph{Fault Injection}
 \paragraph{Architetture Moderne}
-\paragraph{Bibliografia}
+\paragraph{Fonti}
 
 
 \end{document}
