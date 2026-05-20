@@ -1,29 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[italian]{babel}
-\usepackage[a4paper,margin=2.5cm]{geometry}
-\usepackage{setspace}
-\onehalfspacing
-
-\title{Sicurezza nelle console di gioco}
-\author{Marica Bottega, Enrico Cicciarella}
-\date{\today}
-
-\begin{document}
-\maketitle
-\thispagestyle{empty}
-
-%% TODO: Inserire indice
-
-\paragraph{Introduzione}
-Lo scopo di questo elaborato è quello di analizzare come le tecniche offensive e difensive nelle console di gioco casalinghe si siano evolute nel tempo.\\
-Il modello di minaccia all'interno del quale sono immersi questi sistemi è il \textbf{modello MATE} -- \textit{Man At The End}, ovvero quello in cui l'attaccante ha completa disposizione fisica della macchina.\\
-Analizziamo quindi lo stato dell'arte delle tecniche di difesa impiegati dalle più grandi case produttrici di console di gioco, e di come siano comunque state prese di mira attraverso exploit software, corruzione della memoria e attacchi hardware come la \textit{Fault Injection}, con l’obiettivo di aggirare la \textit{Chain of Trust}.
-
-\paragraph{Memory Corruption}
-\paragraph{Crittografia White-Box}
+\paragraph{Protezione della copia e crittografia White-Box}
 Il contesto storico è quello dei primi anni 2000 -- periodo in cui erano appena entrate in commercio console come xBox, GameCube e PlayStation 2. \\
 Come anticipato in introduzione, il modello \textit{MATE} assume in partenza che tutto ciò che si trova all'esterno del processore (RAM, bus di sistema, periferiche, \ldots) sia esposto e potenzialmente sotto il controllo dell'avversario.\\
 Il principio è lo stesso che giustifica la crittografia White-Box: chi esegue il programma è al contempo chi può attaccarlo. \\
@@ -50,9 +25,3 @@ Scendendo ulteriormente nel dettaglio, gli autori analizzano anche altri contest
     \item In alcuni contesti potrebbe essere necessario utilizzare \textbf{cifrature semplici o chiavi corte}, per motivi di performance o di limitazioni hardware. Anche in questo contesto, gli autori presentano due semplici esempi di attacco, uno che mira alla derivazione di un \textit{integrity code} breve a protezione di una porzione di codice tramite \textit{brute force attack}, 
     mentre l'altro che sfrutta le caratteristiche cicliche delle variabili contatore, come il fatto che incrementano in modo regolare, per individuarle (anche se cifrate -- ma con una chiave corta) e ricavarne le locazioni in memoria.
 \end{itemize}
-\paragraph{Fault Injection}
-\paragraph{Architetture Moderne}
-\paragraph{Fonti}
-
-
-\end{document}
