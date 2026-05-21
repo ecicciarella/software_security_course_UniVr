@@ -1,12 +1,29 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {section}{\numberline {1}Introduzione}{1}{section.1}%
-\contentsline {section}{\numberline {2}Memory Corruption}{1}{section.2}%
-\contentsline {section}{\numberline {3}Protezione della copia e crittografia White-Box}{1}{section.3}%
-\contentsline {section}{\numberline {4}Fault Injection}{3}{section.4}%
-\contentsline {section}{\numberline {5}Architetture Moderne}{3}{section.5}%
-\contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{3}{section*.2}%
-\contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{3}{section*.3}%
-\contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{3}{section*.4}%
-\contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{4}{section*.5}%
-\contentsline {section}{\numberline {6}Fonti}{4}{section.6}%
+\contentsline {section}{\numberline {2}intro}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Dispositivi Chiusi e l'Ecosistema \guillemotleft {}Walled Garden\guillemotright {}}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Dal Modello Black-Box al Modello White-Box}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}L'Attacco MATE (Man-At-The-End)}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}La Chain of Trust e la Root of Trust}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Vulnerabilità Software: Memory Corruption}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Analisi Statica e Dinamica da parte dell'Attaccante}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}{4}{subsection.3.2}%
+\contentsline {paragraph}{La meccanica dell'attacco}{4}{section*.2}%
+\contentsline {subsection}{\numberline {3.3}Assenza di Mitigazioni: ASLR e DEP}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Il fallimento del Tamper-Proofing: Stack Canaries}{5}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Altri Casi Studio Rilevanti}{5}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Protezione della copia e crittografia White-Box}{5}{section.4}%
+\contentsline {section}{\numberline {5}Attacchi Hardware: Fault Injection e Glitching}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Il Limite dell'Environment Checking}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}La Tecnica: Fault Injection (Voltage Glitching)}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Caso Studio 1: Reset Glitch Hack (Xbox 360)}{8}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni \guillemotleft {}Patchate\guillemotright {})}{8}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}{8}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Implicazioni e Contromisure}{9}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Architetture Moderne}{9}{section.6}%
+\contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{9}{section*.6}%
+\contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{9}{section*.7}%
+\contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{10}{section*.8}%
+\contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{10}{section*.9}%
+\contentsline {section}{\numberline {7}Fonti}{11}{section.7}%

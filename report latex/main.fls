@@ -1,186 +1,185 @@
-PWD c:\Users\Enrico\Desktop\Enrico\UniVr\Magistrale\Sicurezza Software\software_security_course_UniVr\report latex
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Enrico\Desktop\Enrico\UniVr\Magistrale\Sicurezza Software\software_security_course_UniVr\report latex\main.tex
-OUTPUT main.log
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-italian.tex
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\it\babel-it.ini
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\babel-italian\italian.ldf
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\main.aux
-INPUT .\main.aux
-INPUT main.aux
-OUTPUT main.aux
-INPUT .\main.out
-INPUT .\main.out
-INPUT main.out
-INPUT main.out
-OUTPUT main.pdf
-INPUT .\main.out
-INPUT .\main.out
-OUTPUT main.out
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
-INPUT .\main.toc
-INPUT .\main.toc
-INPUT main.toc
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1000.tfm
-OUTPUT main.toc
-INPUT .\introduzione.tex
-INPUT .\introduzione.tex
-INPUT .\introduzione.tex
-INPUT .\introduzione.tex
-INPUT introduzione.tex
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
-INPUT .\memory_corruption.tex
-INPUT .\memory_corruption.tex
-INPUT .\memory_corruption.tex
-INPUT .\memory_corruption.tex
-INPUT memory_corruption.tex
-INPUT .\crittografia_white_box.tex
-INPUT .\crittografia_white_box.tex
-INPUT .\crittografia_white_box.tex
-INPUT .\crittografia_white_box.tex
-INPUT crittografia_white_box.tex
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0700.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT C:\Users\Enrico\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1000.tfm
-INPUT .\fault_injection.tex
-INPUT .\fault_injection.tex
-INPUT .\fault_injection.tex
-INPUT .\fault_injection.tex
-INPUT fault_injection.tex
-INPUT .\architetture_moderne.tex
-INPUT .\architetture_moderne.tex
-INPUT .\architetture_moderne.tex
-INPUT .\architetture_moderne.tex
-INPUT architetture_moderne.tex
-INPUT .\fonti.tex
-INPUT .\fonti.tex
-INPUT .\fonti.tex
-INPUT .\fonti.tex
-INPUT fonti.tex
-INPUT main.aux
-INPUT .\main.out
-INPUT .\main.out
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk
-INPUT C:\Users\Enrico\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk
+PWD /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex
+INPUT /usr/local/texlive/2026/texmf.cnf
+INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.tex
+OUTPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.log
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-it.ini
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux
+OUTPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+OUTPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.pdf
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+OUTPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
+OUTPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex
+INPUT /usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb

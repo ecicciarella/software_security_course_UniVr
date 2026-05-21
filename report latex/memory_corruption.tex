@@ -1,1 +1,72 @@
-\section{Memory Corruption}
+% TODO: sostituire con il titolo effettivo della sezione
+\section{Vulnerabilità Software: Memory Corruption}
+
+Nelle prime generazioni di console, i \textit{Walled Garden} facevano totale affidamento su una singola barriera: la verifica della firma crittografica in ingresso. Una volta superato quel controllo, il software veniva eseguito in un ambiente privo delle moderne mitigazioni a livello di Sistema Operativo. Sfruttando i poteri di un attaccante \textit{MATE}, è stato possibile compromettere la \textit{Chain of Trust} non forzando la crittografia, ma corrompendo lo stato della memoria del programma in esecuzione.
+
+\subsection{Analisi Statica e Dinamica da parte dell'Attaccante}
+
+Per individuare vulnerabilità sfruttabili in un eseguibile chiuso, l'attaccante \textit{MATE} si avvale di tecniche di ingegneria inversa. L'analisi si divide in due macro-categorie:
+
+\begin{itemize}
+    \item \textbf{Analisi Statica}: L'attaccante analizza il codice macchina per ricostruire il \textit{Control Flow Graph} (CFG). In assenza di adeguate tecniche di \textit{Code Obfuscation}, il flusso di controllo risulta facilmente intelligibile tramite strumenti come IDA Pro o Ghidra.
+    \item \textbf{Analisi Dinamica}: Eseguendo il programma in un debugger (es. GDB, OllyDbg), l'attaccante osserva la «semantica concreta» del programma, monitorando l'allocazione delle variabili in memoria e i valori dei registri della CPU in tempo reale.
+\end{itemize}
+
+\subsection{Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}
+
+Il caso di studio più emblematico di questa era è il cosiddetto ``Twilight Hack'' sulla Nintendo Wii. La vulnerabilità risiedeva nel gioco \textit{The Legend of Zelda: Twilight Princess}, specificamente nel modulo di caricamento del file di salvataggio.
+
+\paragraph{La meccanica dell'attacco}
+
+Il programma copiava una stringa di testo (il nome del cavallo dell'avatar) dal file di salvataggio verso un buffer di dimensione fissa allocato sullo \textit{Stack}, senza eseguire alcun controllo sui limiti (\textit{bounds checking}).\\
+Questa tecnica di attacco, fornire in input una stringa intenzionalmente più lunga della capienza del buffer, è stata formalizzata per la prima volta nel 1996 nell'articolo seminale di Aleph One pubblicato su \textit{Phrack Magazine}:
+
+\begin{quote}
+    \textit{``A buffer is simply a contiguous block of computer memory that holds multiple instances of the same data type. [\ldots] To overflow is to flow, or fill over the top, brims, or bounds. We will concern ourselves only with the overflow of dynamic buffers, otherwise known as stack-based buffer overflows.''}\\
+    --- Aleph One, \hyperref[fonte:aleph_one]{\textit{Smashing The Stack For Fun And Profit}}~[\ref{fonte:aleph_one}], Phrack \#49, 1996
+\end{quote}
+
+I dati in eccesso invadono le locazioni di memoria adiacenti sullo \textit{Stack} con lo scopo di sovrascrivere il \textit{Saved Return Pointer}. Come descritto da Aleph One:
+
+\begin{quote}
+    \textit{``So a buffer overflow allows us to change the return address of a function. In this way we can change the flow of execution of the program. [\ldots] The answer is to place the code we are trying to execute in the buffer we are overflowing, and overwrite the return address so it points back into the buffer.''}\\
+    --- Aleph One, \hyperref[fonte:aleph_one]{\textit{Smashing The Stack For Fun And Profit}}~[\ref{fonte:aleph_one}], 1996
+\end{quote}
+
+Alterando il \textit{Return Pointer}, l'attaccante è riuscito a dirottare il flusso di controllo (\textit{Control Flow Hijacking}) verso un payload malevolo (\textit{Shellcode}) inserito all'interno del finto nome del cavallo.
+
+\subsection{Assenza di Mitigazioni: ASLR e DEP}
+
+Per inquadrare formalmente il successo di questo attacco, è utile ricorrere al framework proposto da Szekeres, Payer, Wei e Song nel paper \hyperref[fonte:sok_memory]{\textbf{SoK: Eternal War in Memory}}~[\ref{fonte:sok_memory}]\footnote{Titolo completo: \textit{SoK: Eternal War in Memory}, presentato all'IEEE Symposium on Security and Privacy 2013.}, presentato all'IEEE Symposium on Security and Privacy 2013. Gli autori costruiscono un modello generale degli exploit di \textit{memory corruption}:
+
+\begin{quote}
+    \textit{``Memory corruption bugs in software written in low-level languages like C or C++ are one of the oldest problems in computer security. The lack of safety in these languages allows attackers to alter the program's behavior or take full control over it by hijacking its control flow. This problem has existed for more than 30 years and a vast number of potential solutions have been proposed, yet memory corruption attacks continue to pose a serious threat.''}\\
+    --- Szekeres, Payer, Wei, Song, \hyperref[fonte:sok_memory]{\textit{SoK: Eternal War in Memory}}~[\ref{fonte:sok_memory}], IEEE S\&P 2013
+\end{quote}
+
+Sulla Wii mancavano le due mitigazioni fondamentali descritte dallo studio:
+
+\begin{itemize}
+    \item \textbf{Assenza di DEP / NX Bit} (\textit{Data Execution Prevention}): La memoria non differenziava i permessi di esecuzione. Come spiegano gli autori, la politica $W \oplus X$ (\textit{Write XOR Execute}) \textit{«states that a page can be either writable or executable, but not both»}~[\ref{fonte:sok_memory}]. Sulla Wii, questa separazione non esisteva: la CPU ha letto la stringa dell'attaccante ed eseguita come codice macchina legittimo.
+    \item \textbf{Assenza di ASLR} (\textit{Address Space Layout Randomization}): I moduli del gioco venivano caricati agli stessi indirizzi fisici ad ogni avvio. Il paper SoK identifica l'ASLR come \textit{«the most comprehensive currently deployed protection against hijacking attacks»}~[\ref{fonte:sok_memory}]. Questo determinismo ha permesso all'attaccante di calcolare con precisione matematica l'indirizzo da inserire nel \textit{Return Pointer}.
+\end{itemize}
+
+Il paper chiarisce anche perché l'ASLR da sola non è sufficiente: essa \textit{«can always be bypassed if not all code and data sections are randomized»}~[\ref{fonte:sok_memory}], evidenziando la necessità di difesa stratificata.
+
+\subsection{Il fallimento del Tamper-Proofing: Stack Canaries}
+
+L'attacco dimostra infine il limite di un software privo di tecniche di \textit{Tamper-Proofing} attive. Il programma non implementava alcun meccanismo per calcolare l'integrità del proprio flusso di controllo, come gli \textit{Stack Canaries}, valori sentinella inseriti tra le variabili locali e il \textit{Return Address} per rilevare eventuali overflow prima del ritorno dalla funzione. L'alterazione malevola è passata inosservata fino all'esecuzione del payload.
+
+\subsection{Altri Casi Studio Rilevanti}
+
+\subsubsection*{Exploit \textit{«libtiff»} (PlayStation Portable)}
+
+Il visualizzatore di foto integrato nella PSP analizzava file TIFF senza adeguati controlli sui limiti interni del parser. Aprendo un'immagine \texttt{.tiff} appositamente malformata, si innescava un \textit{Buffer Overflow} nel parser grafico che permetteva di avviare codice non firmato, una variante diretta della vulnerabilità formalizzata da Aleph One~[\ref{fonte:aleph_one}], applicata a un componente di sistema invece che a un gioco.
+
+\subsubsection*{Exploit \textit{«Soundhax»} (Nintendo 3DS)}
+
+Riproducendo un file audio MP4 manipolato nel lettore musicale integrato della 3DS, si generava un \textit{Heap Overflow}\footnote{Una scrittura fuori dai limiti della memoria dinamica (\textit{heap}).}, una scrittura fuori dai limiti della memoria dinamica (\textit{heap}), che garantiva il controllo totale del sistema. Il SoK di Szekeres et al.~[\ref{fonte:sok_memory}] classifica questo tipo come errore «temporale» o «spaziale» in funzione dell'oggetto corrotto nell'allocatore.
+
+\subsubsection*{\textit{«Independence Exploit»} (PlayStation 2)}
+
+Un abuso della retrocompatibilità: inserendo un file di salvataggio (\texttt{TITLE.DB}) con un nome eccessivamente lungo all'interno di una Memory Card della PS1, si causava un \textit{Buffer Overflow} letale nella routine di parsing della più moderna PS2.
