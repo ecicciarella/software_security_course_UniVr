@@ -1,1 +1,0 @@
-Questo progetto raccoglie il codice LaTeX per la creazione del report dell'elaborato del corso in questione presso UniVr.
