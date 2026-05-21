@@ -1,19 +1,19 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
-\contentsline {section}{\numberline {2}Vulnerabilità Software: Memory Corruption}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Analisi Statica e Dinamica da parte dell'Attaccante}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}{2}{subsection.2.2}%
-\contentsline {paragraph}{La meccanica dell'attacco}{2}{section*.2}%
-\contentsline {subsection}{\numberline {2.3}Assenza di Mitigazioni: ASLR e DEP}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Il fallimento del Tamper-Proofing: Stack Canaries}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {1}Introduzione}{3}{section.1}%
+\contentsline {section}{\numberline {2}Vulnerabilità Software: Memory Corruption}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Analisi Statica e Dinamica da parte dell'Attaccante}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}{3}{subsection.2.2}%
+\contentsline {paragraph}{La meccanica dell'attacco}{3}{section*.2}%
+\contentsline {subsection}{\numberline {2.3}Assenza di Mitigazioni: ASLR e DEP}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Il fallimento del Tamper-Proofing: Stack Canaries}{4}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Altri Casi Studio Rilevanti}{4}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Protezione della copia e crittografia White-Box}{4}{section.3}%
-\contentsline {section}{\numberline {4}Attacchi Hardware: Fault Injection e Glitching}{5}{section.4}%
+\contentsline {section}{\numberline {3}Protezione della copia e crittografia White-Box}{5}{section.3}%
+\contentsline {section}{\numberline {4}Attacchi Hardware: Fault Injection e Glitching}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Il Limite dell'Environment Checking}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}La Tecnica: Fault Injection (Voltage Glitching)}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Caso Studio 1: Reset Glitch Hack (Xbox 360)}{7}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni «Patchate»)}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni ''Patchate'')}{7}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}{7}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Implicazioni e Contromisure}{7}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Architetture Moderne}{8}{section.5}%
@@ -21,4 +21,5 @@
 \contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{8}{section*.7}%
 \contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{8}{section*.8}%
 \contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{8}{section*.9}%
-\contentsline {section}{\numberline {6}Fonti}{10}{section.6}%
+\contentsline {section}{\numberline {6}Conclusioni e considerazioni}{9}{section.6}%
+\contentsline {section}{\numberline {7}Fonti}{10}{section.7}%

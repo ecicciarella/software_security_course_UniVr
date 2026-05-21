@@ -1,0 +1,12 @@
+\section{Conclusioni e considerazioni}
+\hspace*{\parindent}Con questo elaborato abbiamo voluto approfondire lo stato dell'arte dei sistemi videoludici dall'inizio della loro storia fino ai nostri giorni.\\
+La conclusione che abbiamo raggiunto è che, all'interno di un \textit{Walled Garden}, la protezione non è una condizione statica, bensì una continua ricerca sia da parte dei difensori che degli attaccanti.\\
+Nelle prime generazioni, l'assenza di mitigazioni basilari ha reso i sistemi vulnerabili a dirette alterazioni della ''semantica concreta'' del programma tramite banali corruzioni 
+della memoria (\textit{Buffer Overflow}).\\ 
+In seguito, abbiamo notato come l'applicazione teorica della crittografia fallisce se l'implementazione software o l'infrastruttura hardware non sono esplicitamente progettate per resistere a un contesto operativo \textit{White-Box} ostile.\\
+\hspace*{\parindent}Oggi, il paradigma difensivo è profondamente mutato. Accettando il compromesso che sia impossibile scrivere codice totalmente esente da bug o produrre hardware fisicamente inattaccabile, 
+l'ingegneria della sicurezza ha abbracciato gli approcci \textit{Defense-in-Depth} e \textit{Least Privilege}.\\
+Le architetture moderne non si limitano più a tentare di bloccare l'attaccante al perimetro del \textit{Secure Boot}, ma lo confinano attivamente isolando i processi (\textit{Sandboxing}) e virtualizzando l'hardware (\textit{Hypervisor}). 
+Di conseguenza, la compromissione non è più affidata a un singolo bug risolutivo, ma richiede l'elaborazione di complesse \textit{Exploit Chain}, che combinano tecniche avanzate come il ROP per aggirare molteplici strati di mitigazione consecutivi.\\
+\hspace*{\parindent}In conclusione, lo studio della sicurezza nelle console dimostra che l'obiettivo finale del \textit{Tamper-Proofing} e della protezione del software in scenari \textit{MATE} non è l'invulnerabilità assoluta, un traguardo teoricamente irraggiungibile 
+quando l'attaccante possiede fisicamente il dispositivo. Lo scopo è, piuttosto, innalzare la complessità tecnica, il tempo e il costo dell'attacco fino a renderlo impraticabile per la stragrande maggioranza degli attori, garantendo così l'integrità e la sopravvivenza economica dell'ecosistema chiuso.

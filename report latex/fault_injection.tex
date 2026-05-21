@@ -13,7 +13,7 @@ Tuttavia, il software è un'astrazione che dipende totalmente dall'hardware sott
     --- Barenghi, Breveglieri, Koren, Naccache, \hyperref[fonte:barenghi]{\textit{Fault Injection Attacks on Cryptographic Devices}}~[\ref{fonte:barenghi}], Proceedings of the IEEE, 2012
 \end{quote}
 
-Se l'attaccante riesce ad alterare fisicamente le condizioni operative del chip (voltaggio, frequenza di clock, temperatura), può indurre la CPU a commettere errori di calcolo infinitesimali. In questo scenario, la funzione software di verifica fallisce nel rilevare l'anomalia perché è la CPU stessa a «mentire» al software.
+Se l'attaccante riesce ad alterare fisicamente le condizioni operative del chip (voltaggio, frequenza di clock, temperatura), può indurre la CPU a commettere errori di calcolo infinitesimali. In questo scenario, la funzione software di verifica fallisce nel rilevare l'anomalia perché è la CPU stessa a ''mentire'' al software.
 
 \subsection{La Tecnica: Fault Injection (Voltage Glitching)}
 
@@ -33,22 +33,22 @@ La procedura tecnica è la seguente:
     \item Un chip programmabile (FPGA o microcontrollore) viene saldato ai pin di alimentazione della CPU della console.
     \item Il dispositivo monitora i segnali elettrici e attende il ciclo di clock esatto in cui la CPU sta eseguendo l'istruzione critica (es. la comparazione della firma digitale).
     \item In quell'istante, il chip abbassa repentinamente la tensione per una frazione di microsecondo (il \textit{Glitch}).
-    \item La CPU, «stordita» dal calo di energia, non si spegne ma non riesce a completare l'istruzione correttamente: il risultato tipico è l'\textit{Instruction Skip} (salto dell'istruzione di controllo) o la corruzione di un registro.
+    \item La CPU, ''stordita'' dal calo di energia, non si spegne ma non riesce a completare l'istruzione correttamente: il risultato tipico è l'\textit{Instruction Skip} (salto dell'istruzione di controllo) o la corruzione di un registro.
 \end{enumerate}
 
-Come notano Timmers e Spruyt, la conseguenza pratica è che \textit{«the true fault model is hard to predict or prove»}~[\ref{fonte:timmers}]: i fault introdotti possono corrompere registri, bus di memoria o il flusso di istruzioni stesse, con effetti che variano da chip a chip.
+Come notano Timmers e Spruyt, la conseguenza pratica è che \textit{''the true fault model is hard to predict or prove''}~[\ref{fonte:timmers}]: i fault introdotti possono corrompere registri, bus di memoria o il flusso di istruzioni stesse, con effetti che variano da chip a chip.
 
 \subsection{Caso Studio 1: Reset Glitch Hack (Xbox 360)}
 
 L'architettura di sicurezza della Xbox 360 era considerata un capolavoro ingegneristico basato su un \textit{Secure Boot} crittograficamente solido. Non potendo decifrare il codice, gli hacker hanno sviluppato il \textit{Reset Glitch Hack} (RGH).
 
-L'attacco prendeva di mira la \textit{Chain of Trust} al momento dell'accensione. Un \textit{Modchip} saldato sulla scheda madre inviava un impulso elettrico al pin di «Reset» della CPU nell'esatto momento in cui il \textit{Bootloader} stava verificando l'hash crittografico (tramite la funzione \texttt{memcmp}) del Kernel. Il glitch forzava la funzione a restituire un risultato positivo (firma valida) anche per un Kernel modificato, permettendo l'esecuzione di un sistema operativo alterato e sbloccando totalmente la console.
+L'attacco prendeva di mira la \textit{Chain of Trust} al momento dell'accensione. Un \textit{Modchip} saldato sulla scheda madre inviava un impulso elettrico al pin di ''Reset'' della CPU nell'esatto momento in cui il \textit{Bootloader} stava verificando l'hash crittografico (tramite la funzione \texttt{memcmp}) del Kernel. Il glitch forzava la funzione a restituire un risultato positivo (firma valida) anche per un Kernel modificato, permettendo l'esecuzione di un sistema operativo alterato e sbloccando totalmente la console.
 
-\subsection{Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni «Patchate»)}
+\subsection{Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni ''Patchate'')}
 
-Mentre i primi modelli di Nintendo Switch presentavano una vulnerabilità puramente software nel BootROM (il \textit{Fusée Gelée}, un \textit{Buffer Overflow} nella gestione del protocollo USB), Nintendo corresse il difetto nelle revisioni hardware successive (versioni «patchate», Switch Lite e OLED).
+Mentre i primi modelli di Nintendo Switch presentavano una vulnerabilità puramente software nel BootROM (il \textit{Fusée Gelée}, un \textit{Buffer Overflow} nella gestione del protocollo USB), Nintendo corresse il difetto nelle revisioni hardware successive (versioni ''patchate'', Switch Lite e OLED).
 
-Poiché il BootROM è inciso fisicamente nel silicio e la crittografia era stata corretta, gli attaccanti sono ricorsi nuovamente alla \textit{Fault Injection}. I moderni Modchip per Nintendo Switch (come HWFLY o Picofly) utilizzano il \textit{Voltage Glitching} per corrompere l'esecuzione della CPU Tegra X1 esattamente durante la prima fase di BootROM, saltando il controllo della firma del Bootloader. Questo scenario è il caso concreto della dimostrazione di Timmers e Spruyt~[\ref{fonte:timmers}]: quando la superficie logica è ridotta e prova bug è improbabile, \textit{«other attack(s) must be used when not logically flawed»}.
+Poiché il BootROM è inciso fisicamente nel silicio e la crittografia era stata corretta, gli attaccanti sono ricorsi nuovamente alla \textit{Fault Injection}. I moderni Modchip per Nintendo Switch (come HWFLY o Picofly) utilizzano il \textit{Voltage Glitching} per corrompere l'esecuzione della CPU Tegra X1 esattamente durante la prima fase di BootROM, saltando il controllo della firma del Bootloader. Questo scenario è il caso concreto della dimostrazione di Timmers e Spruyt~[\ref{fonte:timmers}]: quando la superficie logica è ridotta e prova bug è improbabile, \textit{''other attack(s) must be used when not logically flawed''}.
 
 \subsection{Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}
 

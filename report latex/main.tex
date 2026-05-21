@@ -5,9 +5,12 @@
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{hyperref}
-\onehalfspacing
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\graphicspath{{img/}}
 
 \setcounter{tocdepth}{1}
+
 
 \title{Approfondimento sulla sicurezza nelle console di gioco}
 \author{Marica Bottega -- VR519372, Enrico Cicciarella -- VR535399}
@@ -16,8 +19,17 @@
 \begin{document}
 
 \maketitle
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ps1breakdown.jpeg}
+    \caption{Didascalia}
+    \label{fig:etichetta}
+\end{figure}
+
 \thispagestyle{empty}
 
+\newpage
 \tableofcontents
 
 \newpage
@@ -25,7 +37,8 @@
 \input{memory_corruption}
 \input{crittografia_white_box}
 \input{fault_injection}
-\input{architetture_moderne} 
+\input{architetture_moderne}
+\input{conclusione}
 \newpage
 \input{fonti}
 

@@ -9,7 +9,7 @@ Per individuare vulnerabilità sfruttabili in un eseguibile chiuso, l'attaccante
 
 \begin{itemize}
     \item \textbf{Analisi Statica}: L'attaccante analizza il codice macchina per ricostruire il \textit{Control Flow Graph} (CFG). In assenza di adeguate tecniche di \textit{Code Obfuscation}, il flusso di controllo risulta facilmente intelligibile tramite strumenti come IDA Pro o Ghidra.
-    \item \textbf{Analisi Dinamica}: Eseguendo il programma in un debugger (es. GDB, OllyDbg), l'attaccante osserva la «semantica concreta» del programma, monitorando l'allocazione delle variabili in memoria e i valori dei registri della CPU in tempo reale.
+    \item \textbf{Analisi Dinamica}: Eseguendo il programma in un debugger (es. GDB, OllyDbg), l'attaccante osserva la ''semantica concreta'' del programma, monitorando l'allocazione delle variabili in memoria e i valori dei registri della CPU in tempo reale.
 \end{itemize}
 
 \subsection{Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}
@@ -47,11 +47,11 @@ Per inquadrare formalmente il successo di questo attacco, è utile ricorrere al 
 Sulla Wii mancavano le due mitigazioni fondamentali descritte dallo studio:
 
 \begin{itemize}
-    \item \textbf{Assenza di DEP / NX Bit} (\textit{Data Execution Prevention}): La memoria non differenziava i permessi di esecuzione. Come spiegano gli autori, la politica $W \oplus X$ (\textit{Write XOR Execute}) \textit{«states that a page can be either writable or executable, but not both»}~[\ref{fonte:sok_memory}]. Sulla Wii, questa separazione non esisteva: la CPU ha letto la stringa dell'attaccante ed eseguita come codice macchina legittimo.
-    \item \textbf{Assenza di ASLR} (\textit{Address Space Layout Randomization}): I moduli del gioco venivano caricati agli stessi indirizzi fisici ad ogni avvio. Il paper SoK identifica l'ASLR come \textit{«the most comprehensive currently deployed protection against hijacking attacks»}~[\ref{fonte:sok_memory}]. Questo determinismo ha permesso all'attaccante di calcolare con precisione matematica l'indirizzo da inserire nel \textit{Return Pointer}.
+    \item \textbf{Assenza di DEP / NX Bit} (\textit{Data Execution Prevention}): La memoria non differenziava i permessi di esecuzione. Come spiegano gli autori, la politica $W \oplus X$ (\textit{Write XOR Execute}) \textit{''states that a page can be either writable or executable, but not both''}~[\ref{fonte:sok_memory}]. Sulla Wii, questa separazione non esisteva: la CPU ha letto la stringa dell'attaccante ed eseguita come codice macchina legittimo.
+    \item \textbf{Assenza di ASLR} (\textit{Address Space Layout Randomization}): I moduli del gioco venivano caricati agli stessi indirizzi fisici ad ogni avvio. Il paper SoK identifica l'ASLR come \textit{''the most comprehensive currently deployed protection against hijacking attacks''}~[\ref{fonte:sok_memory}]. Questo determinismo ha permesso all'attaccante di calcolare con precisione matematica l'indirizzo da inserire nel \textit{Return Pointer}.
 \end{itemize}
 
-Il paper chiarisce anche perché l'ASLR da sola non è sufficiente: essa \textit{«can always be bypassed if not all code and data sections are randomized»}~[\ref{fonte:sok_memory}], evidenziando la necessità di difesa stratificata.
+Il paper chiarisce anche perché l'ASLR da sola non è sufficiente: essa \textit{''can always be bypassed if not all code and data sections are randomized''}~[\ref{fonte:sok_memory}], evidenziando la necessità di difesa stratificata.
 
 \subsection{Il fallimento del Tamper-Proofing: Stack Canaries}
 
@@ -59,14 +59,14 @@ L'attacco dimostra infine il limite di un software privo di tecniche di \textit{
 
 \subsection{Altri Casi Studio Rilevanti}
 
-\subsubsection*{Exploit \textit{«libtiff»} (PlayStation Portable)}
+\subsubsection*{Exploit \textit{''libtiff''} (PlayStation Portable)}
 
 Il visualizzatore di foto integrato nella PSP analizzava file TIFF senza adeguati controlli sui limiti interni del parser. Aprendo un'immagine \texttt{.tiff} appositamente malformata, si innescava un \textit{Buffer Overflow} nel parser grafico che permetteva di avviare codice non firmato, una variante diretta della vulnerabilità formalizzata da Aleph One~[\ref{fonte:aleph_one}], applicata a un componente di sistema invece che a un gioco.
 
-\subsubsection*{Exploit \textit{«Soundhax»} (Nintendo 3DS)}
+\subsubsection*{Exploit \textit{''Soundhax''} (Nintendo 3DS)}
 
-Riproducendo un file audio MP4 manipolato nel lettore musicale integrato della 3DS, si generava un \textit{Heap Overflow}\footnote{Una scrittura fuori dai limiti della memoria dinamica (\textit{heap}).}, una scrittura fuori dai limiti della memoria dinamica (\textit{heap}), che garantiva il controllo totale del sistema. Il SoK di Szekeres et al.~[\ref{fonte:sok_memory}] classifica questo tipo come errore «temporale» o «spaziale» in funzione dell'oggetto corrotto nell'allocatore.
+Riproducendo un file audio MP4 manipolato nel lettore musicale integrato della 3DS, si generava un \textit{Heap Overflow}\footnote{Una scrittura fuori dai limiti della memoria dinamica (\textit{heap}).}, una scrittura fuori dai limiti della memoria dinamica (\textit{heap}), che garantiva il controllo totale del sistema. Il SoK di Szekeres et al.~[\ref{fonte:sok_memory}] classifica questo tipo come errore ''temporale'' o ''spaziale'' in funzione dell'oggetto corrotto nell'allocatore.
 
-\subsubsection*{\textit{«Independence Exploit»} (PlayStation 2)}
+\subsubsection*{\textit{''Independence Exploit''} (PlayStation 2)}
 
 Un abuso della retrocompatibilità: inserendo un file di salvataggio (\texttt{TITLE.DB}) con un nome eccessivamente lungo all'interno di una Memory Card della PS1, si causava un \textit{Buffer Overflow} letale nella routine di parsing della più moderna PS2.
