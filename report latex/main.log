@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.19)  21 MAY 2026 13:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.19)  21 MAY 2026 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -180,26 +180,26 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Info: Redefining \it@ocap on input line 14.
-LaTeX Info: Redefining \it@ccap on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Info: Redefining \it@ocap on input line 16.
+LaTeX Info: Redefining \it@ccap on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -235,54 +235,54 @@ LaTeX Info: Redefining \it@ccap on input line 14.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 14.
+Package hyperref Info: Link coloring OFF on input line 16.
 (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
- (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-)
+(Font)              <6> on input line 19.
+ (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex [1
+ [1
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex [3{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex [5] [6]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex [2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 40.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 40.
+ [3]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex [4]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex [5]
 Overfull \hbox (2.15376pt too wide) in paragraph at lines 22--23
 []\T1/cmr/m/n/9 ""Introducing faul-ts in a tar-get to al-ter its in-ten-ded be-ha-vior." [...] if( key_is_correct ) { open_door();
  []
 
-[7] [8]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex [9]) [10] (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex) [11] (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux)
+[6]) (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex [7]) [8] [9] (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex) [10] (/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F12155972690E34327850DCCA955BEB1;5815.
+(rerunfilecheck)             Checksum: 3AC0725922D7E5BE812C645518EA833E;1158.
  ) 
 Here is how much of TeX's memory you used:
- 9673 strings out of 467525
- 154978 string characters out of 5418982
- 590897 words of memory out of 5000000
- 38410 multiletter control sequences out of 15000+600000
+ 9637 strings out of 467525
+ 154291 string characters out of 5418982
+ 586885 words of memory out of 5000000
+ 38389 multiletter control sequences out of 15000+600000
  641631 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,786b,556s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,786b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.pdf" (11 pages, 397471 bytes).
+Output written on "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.pdf" (10 pages, 388948 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

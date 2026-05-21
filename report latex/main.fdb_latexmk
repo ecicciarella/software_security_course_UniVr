@@ -1,15 +1,14 @@
 # Fdb version 4
-["pdflatex"] 1779363200.22412 "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.tex" "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.pdf" "main" 1779363200.75573 0
+["pdflatex"] 1779364116.26215 "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.tex" "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.pdf" "main" 1779364116.71696 0
   "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/architetture_moderne.tex" 1779362065.86341 4639 dbf23ccdb695c6c9f3e9333f49eb5888 ""
   "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/crittografia_white_box.tex" 1779362065.86354 6139 76727eed7e6099873afbc8332870286b ""
   "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fault_injection.tex" 1779362957.12074 7006 b3326278a2a6ef839aa51604a3fcce67 ""
   "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/fonti.tex" 1779362540.68245 1364 86d349482ea7709da69479d26d59050c ""
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/intro.tex" 1779363200.04728 4697 1fbb1a7f16366635351d04b62950f477 ""
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex" 1779362065.86389 730 6c03356fc57e9528ea8045ef4e1473bf ""
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux" 1779363200.66731 4538 6e6a644232e01fa1451e5d1f41bed181 "pdflatex"
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out" 1779363200.66806 5815 f12155972690e34327850dcca955beb1 "pdflatex"
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.tex" 1779363174.51549 625 5b1d8c009bd9be9252c5b2b9c84f452e ""
-  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc" 1779363200.66824 2815 33e6ccb5fffd2080c1f5187a368f7fbe "pdflatex"
+  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/introduzione.tex" 1779363555.70601 712 82dd4482070955d99aa23ffcead26bbf ""
+  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.aux" 1779364116.63104 3812 e8c8f1d272df33d5ed7eac6dcafeb4f1 "pdflatex"
+  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.out" 1779364116.63175 1158 3ac0725922d7e5be812c645518ea833e "pdflatex"
+  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.tex" 1779364115.61634 646 b22222fae393609a4b7f638c0acc02a3 ""
+  "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/main.toc" 1779364116.63193 2297 4408e5400666b0e99c59a11154764eb3 "pdflatex"
   "/Users/ciccia/Desktop/Università/Magistrale/Anno1 Primo Semestre/Software Security/Progetto/report latex/memory_corruption.tex" 1779362646.19392 8111 18df6564c091001871f1aaa0d0ab7a56 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
