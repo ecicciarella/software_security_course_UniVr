@@ -13,10 +13,10 @@
 \contentsline {subsection}{\numberline {4.1}Il Limite dell'Environment Checking}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}La Tecnica: Fault Injection (Voltage Glitching)}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Caso Studio 1: Reset Glitch Hack (Xbox 360)}{7}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni \guillemotleft {}Patchate\guillemotright {})}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni «Patchate»)}{7}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}{7}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Implicazioni e Contromisure}{7}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Architetture Moderne}{7}{section.5}%
+\contentsline {section}{\numberline {5}Architetture Moderne}{8}{section.5}%
 \contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{8}{section*.6}%
 \contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{8}{section*.7}%
 \contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{8}{section*.8}%

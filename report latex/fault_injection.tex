@@ -1,61 +1,64 @@
 \section{Attacchi Hardware: Fault Injection e Glitching}
 
-Con la maturazione delle tecniche di Secure Coding e la corretta implementazione della crittografia, le architetture dei Walled Garden sono diventate logicamente inattaccabili a livello software. Tuttavia, in uno scenario MATE l'attaccante possiede il dispositivo fisico. Quando il software non presenta vulnerabilità sfruttabili, il nuovo vettore di attacco diventa l'hardware stesso, invalidando l'assunzione fondamentale dell'informatica: che la CPU esegua le istruzioni in modo deterministico e corretto.
+Con la maturazione delle tecniche di Secure Coding e la corretta implementazione della crittografia, le architetture dei \textit{Walled Garden} sono diventate logicamente inattaccabili a livello software. Tuttavia, in uno scenario \textit{MATE} l'attaccante possiede il dispositivo fisico. Quando il software non presenta vulnerabilità sfruttabili, il nuovo vettore di attacco diventa l'hardware stesso, invalidando l'assunzione fondamentale dell'informatica: che la CPU esegua le istruzioni in modo deterministico e corretto.
 
 \subsection{Il Limite dell'Environment Checking}
 
-Le tecniche di Tamper-Proofing più avanzate prevedono l'Environment Checking: un programma blindato verifica non solo la propria integrità, ma anche l'autenticità dell'ambiente (il processore e la memoria) in cui gira.
+Le tecniche di \textit{Tamper-Proofing} più avanzate prevedono l'\textit{Environment Checking}: un programma blindato verifica non solo la propria integrità, ma anche l'autenticità dell'ambiente (il processore e la memoria) in cui gira.
 
-Tuttavia, il software è un'astrazione che dipende totalmente dall'hardware sottostante. Come evidenziato da Barenghi, Breveglieri, Koren e Naccache nel paper \guillemotleft{}Fault Injection Attacks on Cryptographic Devices\guillemotright{} (2012):
+Tuttavia, il software è un'astrazione che dipende totalmente dall'hardware sottostante. Come evidenziato da Barenghi, Breveglieri, Koren e Naccache nel paper \hyperref[fonte:barenghi]{\textbf{Fault Injection Attacks on Cryptographic Devices}}~[\ref{fonte:barenghi}]\footnote{Titolo originale: \textit{Fault Injection Attacks on Cryptographic Devices: Theory, Practice, and Countermeasures}, pubblicato su Proceedings of the IEEE, 2012.}:
 
 \begin{quote}
-\small "Although the current standard cryptographic algorithms proved to withstand exhaustive attacks, their hardware and software implementations have exhibited vulnerabilities to side channel attacks, e.g., power analysis and fault injection attacks. This paper focuses on fault injection attacks that have been shown to require inexpensive equipment and a short amount of time.", Barenghi, Breveglieri, Koren, Naccache. Proceedings of the IEEE, 2012 [7]
+    \textit{``Although the current standard cryptographic algorithms proved to withstand exhaustive attacks, their hardware and software implementations have exhibited vulnerabilities to side channel attacks, e.g., power analysis and fault injection attacks. This paper focuses on fault injection attacks that have been shown to require inexpensive equipment and a short amount of time.''}\\
+    --- Barenghi, Breveglieri, Koren, Naccache, \hyperref[fonte:barenghi]{\textit{Fault Injection Attacks on Cryptographic Devices}}~[\ref{fonte:barenghi}], Proceedings of the IEEE, 2012
 \end{quote}
 
-Se l'attaccante riesce ad alterare fisicamente le condizioni operative del chip (voltaggio, frequenza di clock, temperatura), può indurre la CPU a commettere errori di calcolo infinitesimali. In questo scenario, la funzione software di verifica fallisce nel rilevare l'anomalia perché è la CPU stessa a \guillemotleft{}mentire\guillemotright{} al software.
+Se l'attaccante riesce ad alterare fisicamente le condizioni operative del chip (voltaggio, frequenza di clock, temperatura), può indurre la CPU a commettere errori di calcolo infinitesimali. In questo scenario, la funzione software di verifica fallisce nel rilevare l'anomalia perché è la CPU stessa a «mentire» al software.
 
 \subsection{La Tecnica: Fault Injection (Voltage Glitching)}
 
-La manipolazione fisica del processore per indurre errori prende il nome di Fault Injection. Timmers e Spruyt (2016) nella presentazione \guillemotleft{}Bypassing Secure Boot using Fault Injection\guillemotright{} (Black Hat Europe 2016) forniscono la definizione operativa:
+La manipolazione fisica del processore per indurre errori prende il nome di \textit{Fault Injection}. Timmers e Spruyt (2016) nella presentazione \hyperref[fonte:timmers]{\textbf{Bypassing Secure Boot using Fault Injection}}~[\ref{fonte:timmers}]\footnote{Presentata alla conferenza Black Hat Europe 2016.} forniscono la definizione operativa:
 
 \begin{quote}
-\small ""Introducing faults in a target to alter its intended behavior." [...] if( key\_is\_correct ) \{ open\_door(); \} else \{ keep\_door\_closed(); \}, Glitch here!", Timmers, Spruyt. Bypassing Secure Boot using Fault Injection, Black Hat EU 2016 [8]
+    \textit{``Introducing faults in a target to alter its intended behavior.''} [\ldots]\\
+    \texttt{if( key\_is\_correct ) \{ open\_door(); \} else \{ keep\_door\_closed(); \}}, \textit{Glitch here!}\\
+    --- Timmers, Spruyt, \hyperref[fonte:timmers]{\textit{Bypassing Secure Boot using Fault Injection}}~[\ref{fonte:timmers}], Black Hat EU 2016
 \end{quote}
 
-Gli autori classificano le tecniche di iniezione in quattro categorie principali: manipolazione del clock, del voltaggio, di campi elettromagnetici e del laser. La variante più accessibile e utilizzata nell'hacking delle console è il Voltage Glitching.
+Gli autori classificano le tecniche di iniezione in quattro categorie principali: manipolazione del clock, del voltaggio, di campi elettromagnetici e del laser. La variante più accessibile e utilizzata nell'hacking delle console è il \textit{Voltage Glitching}.
 
 La procedura tecnica è la seguente:
 
 \begin{enumerate}
     \item Un chip programmabile (FPGA o microcontrollore) viene saldato ai pin di alimentazione della CPU della console.
     \item Il dispositivo monitora i segnali elettrici e attende il ciclo di clock esatto in cui la CPU sta eseguendo l'istruzione critica (es. la comparazione della firma digitale).
-    \item In quell'istante, il chip abbassa repentinamente la tensione per una frazione di microsecondo (il Glitch).
-    \item La CPU, \guillemotleft{}stordita\guillemotright{} dal calo di energia, non si spegne ma non riesce a completare l'istruzione correttamente: il risultato tipico è l'Instruction Skip (salto dell'istruzione di controllo) o la corruzione di un registro.
+    \item In quell'istante, il chip abbassa repentinamente la tensione per una frazione di microsecondo (il \textit{Glitch}).
+    \item La CPU, «stordita» dal calo di energia, non si spegne ma non riesce a completare l'istruzione correttamente: il risultato tipico è l'\textit{Instruction Skip} (salto dell'istruzione di controllo) o la corruzione di un registro.
 \end{enumerate}
 
-Come notano Timmers e Spruyt, la conseguenza pratica è che \guillemotleft{}the true fault model is hard to predict or prove\guillemotright{} [8]: i fault introdotti possono corrompere registri, bus di memoria o il flusso di istruzioni stesse, con effetti che variano da chip a chip.
+Come notano Timmers e Spruyt, la conseguenza pratica è che \textit{«the true fault model is hard to predict or prove»}~[\ref{fonte:timmers}]: i fault introdotti possono corrompere registri, bus di memoria o il flusso di istruzioni stesse, con effetti che variano da chip a chip.
 
 \subsection{Caso Studio 1: Reset Glitch Hack (Xbox 360)}
 
-L'architettura di sicurezza della Xbox 360 era considerata un capolavoro ingegneristico basato su un Secure Boot crittograficamente solido. Non potendo decifrare il codice, gli hacker hanno sviluppato il Reset Glitch Hack (RGH).
+L'architettura di sicurezza della Xbox 360 era considerata un capolavoro ingegneristico basato su un \textit{Secure Boot} crittograficamente solido. Non potendo decifrare il codice, gli hacker hanno sviluppato il \textit{Reset Glitch Hack} (RGH).
 
-L'attacco prendeva di mira la Chain of Trust al momento dell'accensione. Un Modchip saldato sulla scheda madre inviava un impulso elettrico al pin di \guillemotleft{}Reset\guillemotright{} della CPU nell'esatto momento in cui il Bootloader stava verificando l'hash crittografico (tramite la funzione memcmp) del Kernel. Il glitch forzava la funzione a restituire un risultato positivo (firma valida) anche per un Kernel modificato, permettendo l'esecuzione di un sistema operativo alterato e sbloccando totalmente la console.
+L'attacco prendeva di mira la \textit{Chain of Trust} al momento dell'accensione. Un \textit{Modchip} saldato sulla scheda madre inviava un impulso elettrico al pin di «Reset» della CPU nell'esatto momento in cui il \textit{Bootloader} stava verificando l'hash crittografico (tramite la funzione \texttt{memcmp}) del Kernel. Il glitch forzava la funzione a restituire un risultato positivo (firma valida) anche per un Kernel modificato, permettendo l'esecuzione di un sistema operativo alterato e sbloccando totalmente la console.
 
-\subsection{Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni \guillemotleft{}Patchate\guillemotright{})}
+\subsection{Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni «Patchate»)}
 
-Mentre i primi modelli di Nintendo Switch presentavano una vulnerabilità puramente software nel BootROM (il Fusée Gelée, un Buffer Overflow nella gestione del protocollo USB), Nintendo corresse il difetto nelle revisioni hardware successive (versioni \guillemotleft{}patchate\guillemotright{}, Switch Lite e OLED).
+Mentre i primi modelli di Nintendo Switch presentavano una vulnerabilità puramente software nel BootROM (il \textit{Fusée Gelée}, un \textit{Buffer Overflow} nella gestione del protocollo USB), Nintendo corresse il difetto nelle revisioni hardware successive (versioni «patchate», Switch Lite e OLED).
 
-Poiché il BootROM è inciso fisicamente nel silicio e la crittografia era stata corretta, gli attaccanti sono ricorsi nuovamente alla Fault Injection. I moderni Modchip per Nintendo Switch (come HWFLY o Picofly) utilizzano il Voltage Glitching per corrompere l'esecuzione della CPU Tegra X1 esattamente durante la prima fase di BootROM, saltando il controllo della firma del Bootloader. Questo scenario è il caso concreto della dimostrazione di Timmers e Spruyt [8]: quando la superficie logica è ridotta e prova bug è improbabile, \guillemotleft{}other attack(s) must be used when not logically flawed\guillemotright{}.
+Poiché il BootROM è inciso fisicamente nel silicio e la crittografia era stata corretta, gli attaccanti sono ricorsi nuovamente alla \textit{Fault Injection}. I moderni Modchip per Nintendo Switch (come HWFLY o Picofly) utilizzano il \textit{Voltage Glitching} per corrompere l'esecuzione della CPU Tegra X1 esattamente durante la prima fase di BootROM, saltando il controllo della firma del Bootloader. Questo scenario è il caso concreto della dimostrazione di Timmers e Spruyt~[\ref{fonte:timmers}]: quando la superficie logica è ridotta e prova bug è improbabile, \textit{«other attack(s) must be used when not logically flawed»}.
 
 \subsection{Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}
 
-Anche la Microsoft Xbox One è stata compromessa tramite voltage glitching applicato al processore di sicurezza ausiliario (il Platform Security Processor). Gli attaccanti hanno iniettato un guasto durante la verifica della firma del firmware, ottenendo l'esecuzione di codice non autorizzato in un contesto con privilegi elevati, dimostrando che la tecnica del Glitching trasferiva le medesime dinamiche dalla generazione precedente a quella successiva.
+Anche la Microsoft Xbox One è stata compromessa tramite voltage glitching applicato al processore di sicurezza ausiliario (il \textit{Platform Security Processor}). Gli attaccanti hanno iniettato un guasto durante la verifica della firma del firmware, ottenendo l'esecuzione di codice non autorizzato in un contesto con privilegi elevati, dimostrando che la tecnica del Glitching trasferiva le medesime dinamiche dalla generazione precedente a quella successiva.
 
 \subsection{Implicazioni e Contromisure}
 
-Gli attacchi di Fault Injection dimostrano un paradigma cruciale: la sicurezza del software non può essere garantita se l'hardware non è resiliente alle alterazioni fisiche. Barenghi et al. [7] classificano le contromisure in due famiglie principali:
+Gli attacchi di \textit{Fault Injection} dimostrano un paradigma cruciale: la sicurezza del software non può essere garantita se l'hardware non è resiliente alle alterazioni fisiche. Barenghi et al.~[\ref{fonte:barenghi}] classificano le contromisure in due famiglie principali:
 
 \begin{enumerate}
-    \item Ridondanza spaziale e temporale: eseguire lo stesso controllo crittografico più volte in momenti diversi, confrontando i risultati. Un singolo glitch corromperà uno solo dei risultati, rendendolo rilevabile.
-    \item Sensori fisici (Voltage Detectors): circuiti dedicati che monitorano continuamente la tensione di alimentazione e spengono immediatamente il sistema al rilevamento di anomalie.
+    \item \textbf{Ridondanza spaziale e temporale}: eseguire lo stesso controllo crittografico più volte in momenti diversi, confrontando i risultati. Un singolo glitch corromperà uno solo dei risultati, rendendolo rilevabile.
+    \item \textbf{Sensori fisici} (\textit{Voltage Detectors}): circuiti dedicati che monitorano continuamente la tensione di alimentazione e spengono immediatamente il sistema al rilevamento di anomalie.
 \end{enumerate}
