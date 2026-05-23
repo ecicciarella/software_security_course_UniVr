@@ -19,26 +19,34 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Il fallimento del Tamper-Proofing: Stack Canaries}{5}{subsection.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Altri Casi Studio Rilevanti}{5}{subsection.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Protezione della copia e crittografia White-Box}{6}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Attacchi Hardware: Fault Injection e Glitching}{7}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Il Limite dell'Environment Checking}{7}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}La Tecnica: Fault Injection (Voltage Glitching)}{7}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Caso Studio 1: Reset Glitch Hack (Xbox 360)}{8}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni ''Patchate'')}{8}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}{8}{subsection.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Implicazioni e Contromisure}{8}{subsection.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Architetture Moderne}{9}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{9}{section*.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{9}{section*.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{9}{section*.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{9}{section*.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusioni e considerazioni}{9}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Fonti}{11}{section.7}\protected@file@percent }
-\newlabel{fonte:copy_protection}{{1}{11}{Fonti}{Item.13}{}}
-\newlabel{fonte:ctr}{{2}{11}{Fonti}{Item.14}{}}
-\newlabel{fonte:ps5}{{3}{11}{Fonti}{Item.15}{}}
-\newlabel{fonte:dataonly}{{4}{11}{Fonti}{Item.16}{}}
-\newlabel{fonte:sok_memory}{{5}{11}{Fonti}{Item.17}{}}
-\newlabel{fonte:aleph_one}{{6}{11}{Fonti}{Item.18}{}}
-\newlabel{fonte:barenghi}{{7}{11}{Fonti}{Item.19}{}}
-\newlabel{fonte:timmers}{{8}{11}{Fonti}{Item.20}{}}
-\gdef \@abspage@last{11}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Contesto storico e ttecniche di attacco}{6}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Case Study: la sicurezza di Xbox (OG)}{7}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Trace Analysis e \textit  {bus sniffing}}{7}{subsubsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Mod-chip}{7}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Emulatori e software non autorizzato}{8}{subsubsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Lazy authentication e verifica non rigorosa}{8}{subsubsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Cifrature semplici e chiavi corte}{8}{subsubsection.3.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Attacchi Hardware: Fault Injection e Glitching}{8}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Il Limite dell'Environment Checking}{8}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}La Tecnica: Fault Injection (Voltage Glitching)}{8}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Caso Studio 1: Reset Glitch Hack (Xbox 360)}{9}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Caso Studio 2: Voltage Glitching del BootROM (Nintendo Switch, versioni ''Patchate'')}{9}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Caso Studio 3: Xbox One. Voltage Glitching del Secure Boot}{9}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Implicazioni e Contromisure}{9}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Architetture Moderne}{10}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{XOM e kCFI come ostacolo all'analisi del codice}{10}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L'hypervisor AMD SVM come environment checker}{10}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Isolamento crittografico nel co-processore sicuro}{10}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{PS4 vs PS5: evoluzione del modello di post-exploitation}{10}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusioni e considerazioni}{10}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Fonti}{12}{section.7}\protected@file@percent }
+\newlabel{fonte:copy_protection}{{1}{12}{Fonti}{Item.13}{}}
+\newlabel{fonte:ctr}{{2}{12}{Fonti}{Item.14}{}}
+\newlabel{fonte:ps5}{{3}{12}{Fonti}{Item.15}{}}
+\newlabel{fonte:dataonly}{{4}{12}{Fonti}{Item.16}{}}
+\newlabel{fonte:sok_memory}{{5}{12}{Fonti}{Item.17}{}}
+\newlabel{fonte:aleph_one}{{6}{12}{Fonti}{Item.18}{}}
+\newlabel{fonte:barenghi}{{7}{12}{Fonti}{Item.19}{}}
+\newlabel{fonte:timmers}{{8}{12}{Fonti}{Item.20}{}}
+\newlabel{fonte:xbox}{{9}{12}{Fonti}{Item.21}{}}
+\gdef \@abspage@last{12}

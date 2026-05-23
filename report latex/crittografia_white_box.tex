@@ -1,5 +1,6 @@
 \section{Protezione della copia e crittografia White-Box}
-Il contesto storico è quello dei primi anni 2000 -- periodo in cui erano appena entrate in commercio console come xBox, GameCube e PlayStation 2. \\
+\subsection{Contesto storico e ttecniche di attacco}
+Il contesto storico è quello dei primi anni 2000 -- periodo in cui erano appena entrate in commercio console come Xbox, GameCube e PlayStation 2. \\
 Come anticipato in introduzione, il modello \textit{MATE} assume in partenza che tutto ciò che si trova all'esterno del processore (RAM, bus di sistema, periferiche, \ldots) sia esposto e potenzialmente sotto il controllo dell'avversario.\\
 Il principio è lo stesso che giustifica la crittografia White-Box: chi esegue il programma è al contempo chi può attaccarlo. \\
 Il contributo di \textit{Weidong Shi, Hsien-Hsin S. Lee, Chenghuai Lu e Tao Zhang}, pur non essendo specifico dell'ambito videoludico, esamina 
@@ -24,4 +25,24 @@ Scendendo ulteriormente nel dettaglio, gli autori analizzano anche altri contest
     a questo tipo di attacchi prevedono anche l'impiego di \textit{program analysis} o di diverse tecniche di compilazione.
     \item In alcuni contesti potrebbe essere necessario utilizzare \textbf{cifrature semplici o chiavi corte}, per motivi di performance o di limitazioni hardware. Anche in questo contesto, gli autori presentano due semplici esempi di attacco, uno che mira alla derivazione di un \textit{integrity code} breve a protezione di una porzione di codice tramite \textit{brute force attack}, 
     mentre l'altro che sfrutta le caratteristiche cicliche delle variabili contatore, come il fatto che incrementano in modo regolare, per individuarle (anche se cifrate -- ma con una chiave corta) e ricavarne le locazioni in memoria.
+\subsection{Case Study: la sicurezza di Xbox (OG)}
+Il seguente case study è basato sull'analisi di \textit{Michael Steil} nel paper \hyperref[fonte:xbox]{\textbf{17 Mistakes Microsoft Made in the Xbox Security System}}~[\ref{fonte:xbox}].\\
+L'originale Xbox, introdotta sul mercato da Microsoft nel 2001, era stata ideata per essere utilizzata senza sofware copiati, applicazioni non ufficiali e sistemi operativi alternativi; tutti i sistemi di sicurezza, pertanto, erano stati implementati per adempiere a questo scopo.\\
+In termini di hardware, per ridurre le tempistiche di sviluppo e costruzione, Microsoft ha optato per creare la sua console a partire da componenti per PC \textit{off the shelf}, mentre per il software si è affidata alle tecnologie proprietarie di Windows e DirectX come basi della console.\\
+Nonostante gli errori compiuti da Microsoft in questa console siano diversi, vogliamo concentrarci sulla concretizzazione di quanto analizzato fino ad ora in questo capitolo.
+\subsubsection{Trace Analysis e \textit{bus sniffing}}
+L'autore cita il lavoro di Andrew "bunnie" Huang\footnote{\href{https://www.bunniestudios.com/bunnie/proj/anatak/xboxmod.html}{\textit{Bunnie's adventures hacking the Xbox}}}, al tempo studente PhD al MIT, il quale una volta disassemblata la console ha ricavato moltissime informazioni dalla flash memory:
+analizzandone il contenuto, trovò nei 512 byte superiori il codice di una vecchia versione della ROM rimasta per errore nel build finale -- uno spazio che invece sarebbe dovuto rimanere libero, dedicato ad una porzione di memoria denominata d'ora in avanti in \textit{secret ROM}, destinata al setup della console e dal codice di decriptazione della memoria flash. 
+Bunnie scoprì che questo codice era un interpreter per le tabelle in memoria flash, ed in aggiunta una funzione di decriptazione che somigliava ad \textit{RC4}\footnote{\href{https://en.wikipedia.org/wiki/RC4}{RC4}: Uno tra i più famosi e diffusi \textbf{algoritmi di cifratura a flusso a chiave simmetrica}, utilizzato ampiamente in protocolli quali l'SSL ed il WEP.}.\\
+Dal momento che, indipendentemente da quali operazioni compiesse su questa porzione di memoria, la console si avviava correttamente, capì che doveva necessariamente essere sovrascritta ad ogni avvio, e che quello era il luogo dove si trovava la \textit{secret ROM}.\\
+Sfruttando le risorse del laboratorio hardware del MIT, Huang costruì un hardware dedicato per `sniffare' il bus \textit{HyperTransport}\footnote{\href{https://en.wikipedia.org/wiki/HyperTransport}{HyperTransport (HT)}: Conosciuto anche come \textit{Lightning Data Transport}, è una tecnologia destinata all'interconnessione tra processori di un computer.}, 
+ritenuto inaccessibile da Microsoft, estraendo così la \textit{secret ROM} completa e la chiave \textit{RC4}.
+\subsubsection{Mod-chip}
+Dopo aver ottenuto le chiavi di crittografia, comparvero i mod-chip: alcuni rimpiazzavano interamente la memoria flash, mentre altri ne `patchavano' solo una parte, ed utilizzavano per la gran parte il chip originale. \\
+Se l'Xbox veniva avviata senza alcuna flash memory installata, essa tentava di leggere dal bus LPC; questa scoperta ha portato allo sviluppo di chip che inducevano la console a `credere' di non avere alcuna memoria installata, ed il \textit{fallback} era un chip custom che permetteva di copiare interi giochi sull'hard disk della console e di lanciarli da lì.
+\subsubsection{Emulatori e software non autorizzato}
+
+\subsubsection{Lazy authentication e verifica non rigorosa}
+\subsubsection{Cifrature semplici e chiavi corte}
+
 \end{itemize}
