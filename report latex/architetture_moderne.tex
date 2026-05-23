@@ -2,7 +2,7 @@
 Riguardo l'analisi delle architetture moderne, ovvero quelle che caratterizzano le console degli anni 2020, la letteratura non offre molti approfondimenti.\\
 I riferimenti di questa sezione provengono dal documento \hyperref[fonte:ps5]{\emph{``Next-Gen Exploitation: Exploring the PS5 Security Landscape''}} [\ref{fonte:ps5}] 
 redatto da SpecterDev\footnote{\href{https://dayzerosec.com/}{\textit{Dayzerosec — About SpecterDev}}
-}, un ricercatore di sicurezza specializzato in kernel exploitation e virtualizzazione, con focus su Android e Linux~[\ref{fonte:specterdev}] e che si occupa di sicurezza delle console come attività secondaria dal 2020, 
+}, un ricercatore di sicurezza specializzato in kernel exploitation e virtualizzazione, con focus su Android e Linux e che si occupa di sicurezza delle console come attività secondaria dal 2020, 
 con particolare attenzione all'hypervisor di PlayStation~5.\\
 Abbiamo estrapolato dal documento solo alcune delle tecniche difensive adottate da questa nuova console, esposte nei seguenti paragrafi.
 
@@ -28,4 +28,4 @@ In questa ultima sezione, abbiamo voluto evidenziare con un confronto diretto le
 Sulla vecchia PlayStation~4 le mitigazioni erano deboli, e spesso una \textit{kernel R/W} era sufficiente -- l'assenza di SMAP permetteva di costruire oggetti kernel falsi direttamente nello spazio utente e non c'era nemmeno bisogno di avere a che fare con la \textit{kernel Address Space Layout Randomization} [kASLR], 
 che mescola randomicamente la posizione in memoria del kernel ad ogni avvio, per non rendere noto il luogo in memoria fisso dove si trovano le strutture sensibili.\\
 Su PlayStation~5 gli unici attacchi possibili sono i \href{https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think}{\textit{data-only attacks}}\footnote{Attacchi che non modificano il flusso di controllo del programma: l'attaccante sfrutta un bug di scrittura in memoria per corrompere dati, non codice~\hyperref[fonte:dataonly]{[\ref{fonte:dataonly}]}},
-e l'unico modo per accedere senza bug nell'hypervisor e tramite lo spoofing della mailbox PSP (che tuttavia l'autore non ha verificato).
+e l'unico modo per accedere senza bug nell'hypervisor è tramite lo spoofing della mailbox PSP (che tuttavia l'autore non ha verificato).

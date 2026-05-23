@@ -1,14 +1,14 @@
 \section{Protezione della copia e crittografia White-Box}
-\subsection{Contesto storico e ttecniche di attacco}
+\subsection{Contesto storico e tecniche di attacco}
 Il contesto storico è quello dei primi anni 2000 -- periodo in cui erano appena entrate in commercio console come Xbox, GameCube e PlayStation 2. \\
 Come anticipato in introduzione, il modello \textit{MATE} assume in partenza che tutto ciò che si trova all'esterno del processore (RAM, bus di sistema, periferiche, \ldots) sia esposto e potenzialmente sotto il controllo dell'avversario.\\
 Il principio è lo stesso che giustifica la crittografia White-Box: chi esegue il programma è al contempo chi può attaccarlo. \\
 Il contributo di \textit{Weidong Shi, Hsien-Hsin S. Lee, Chenghuai Lu e Tao Zhang}, pur non essendo specifico dell'ambito videoludico, esamina 
-\hyperref[fonte:copy_protection]{\textbf{Attacchi e analisi del rischio per i sistemi hardware a supporto della protezione dalla copia del software}}~[\ref{fonte:copy_protection}]\footnote{Titolo originale: \textit{Attacks and Risk Analysis for Hardware Supported Software Copy Protection Systems}} e cita tra le principali tecniche di attacco hardware per soverchiare le difese sofware:
+\hyperref[fonte:copy_protection]{\textbf{Attacchi e analisi del rischio per i sistemi hardware a supporto della protezione dalla copia del software}}~[\ref{fonte:copy_protection}]\footnote{Titolo originale: \textit{Attacks and Risk Analysis for Hardware Supported Software Copy Protection Systems}} e cita tra le principali tecniche di attacco hardware per soverchiare le difese software:
 \begin{itemize}
     \item \textbf{Trace Analysis}: l'attaccante raccoglie informazioni del software protetto tramite \textit{logging} ed analizzando le tracce d'esecuzione dello stesso. Alcune primitive sono riconoscibili anche dopo essere state cifrate (ad esempio branch condizionali, indici e diversi tipi di variabili).
     \item \textbf{Mod-chip}: con il termine \textit{mod-chip} gli autori si riferiscono a dispositivi designati a mettere alla luce i meccanismi di protezione di copia. Possono anche essere destinati all'appropriazione del segnale di un altro dispositivo o a lanciare attacchi di spoofing ad altri dispositivi.
-    \item \textbf{Emulatori}: è complesso combattere contro attacchi di emulazione senza utilizzare la cifratura; tuttavia, non è possibile parlare di protezione della copia del sofware se il suddetto può essere eseguito su un emulatore senza autorizzazione.
+    \item \textbf{Emulatori}: è complesso combattere contro attacchi di emulazione senza utilizzare la cifratura; tuttavia, non è possibile parlare di protezione della copia del software se il suddetto può essere eseguito su un emulatore senza autorizzazione.
 \end{itemize}
 Scendendo ulteriormente nel dettaglio, gli autori analizzano anche altri contesti ed alcuni dei relativi attacchi:
 \begin{itemize}
@@ -25,11 +25,13 @@ Scendendo ulteriormente nel dettaglio, gli autori analizzano anche altri contest
     a questo tipo di attacchi prevedono anche l'impiego di \textit{program analysis} o di diverse tecniche di compilazione.
     \item In alcuni contesti potrebbe essere necessario utilizzare \textbf{cifrature semplici o chiavi corte}, per motivi di performance o di limitazioni hardware. Anche in questo contesto, gli autori presentano due semplici esempi di attacco, uno che mira alla derivazione di un \textit{integrity code} breve a protezione di una porzione di codice tramite \textit{brute force attack}, 
     mentre l'altro che sfrutta le caratteristiche cicliche delle variabili contatore, come il fatto che incrementano in modo regolare, per individuarle (anche se cifrate -- ma con una chiave corta) e ricavarne le locazioni in memoria.
+\end{itemize}
+
 \subsection{Case Study: la sicurezza di Xbox (OG)}
 Il seguente case study è basato sull'analisi di \textit{Michael Steil} nel paper \hyperref[fonte:xbox]{\textbf{17 Mistakes Microsoft Made in the Xbox Security System}}~[\ref{fonte:xbox}].\\
-L'originale Xbox, introdotta sul mercato da Microsoft nel 2001, era stata ideata per essere utilizzata senza sofware copiati, applicazioni non ufficiali e sistemi operativi alternativi; tutti i sistemi di sicurezza, pertanto, erano stati implementati per adempiere a questo scopo.\\
+L'originale Xbox, introdotta sul mercato da Microsoft nel 2001, era stata ideata per essere utilizzata senza software copiati, applicazioni non ufficiali e sistemi operativi alternativi; tutti i sistemi di sicurezza, pertanto, erano stati implementati per adempiere a questo scopo.\\
 In termini di hardware, per ridurre le tempistiche di sviluppo e costruzione, Microsoft ha optato per creare la sua console a partire da componenti per PC \textit{off the shelf}, mentre per il software si è affidata alle tecnologie proprietarie di Windows e DirectX come basi della console.\\
-Nonostante gli errori compiuti da Microsoft in questa console siano diversi, vogliamo concentrarci sulla concretizzazione di quanto analizzato fino ad ora in questo capitolo.
+Nonostante gli errori compiuti da Microsoft in questa console siano diversi, vogliamo concentrarci solo sulla concretizzazione di quanto analizzato fino ad ora in questo capitolo.
 \subsubsection{Trace Analysis e \textit{bus sniffing}}
 L'autore cita il lavoro di Andrew "bunnie" Huang\footnote{\href{https://www.bunniestudios.com/bunnie/proj/anatak/xboxmod.html}{\textit{Bunnie's adventures hacking the Xbox}}}, al tempo studente PhD al MIT, il quale una volta disassemblata la console ha ricavato moltissime informazioni dalla flash memory:
 analizzandone il contenuto, trovò nei 512 byte superiori il codice di una vecchia versione della ROM rimasta per errore nel build finale -- uno spazio che invece sarebbe dovuto rimanere libero, dedicato ad una porzione di memoria denominata d'ora in avanti in \textit{secret ROM}, destinata al setup della console e dal codice di decriptazione della memoria flash. 
@@ -41,8 +43,13 @@ ritenuto inaccessibile da Microsoft, estraendo così la \textit{secret ROM} comp
 Dopo aver ottenuto le chiavi di crittografia, comparvero i mod-chip: alcuni rimpiazzavano interamente la memoria flash, mentre altri ne `patchavano' solo una parte, ed utilizzavano per la gran parte il chip originale. \\
 Se l'Xbox veniva avviata senza alcuna flash memory installata, essa tentava di leggere dal bus LPC; questa scoperta ha portato allo sviluppo di chip che inducevano la console a `credere' di non avere alcuna memoria installata, ed il \textit{fallback} era un chip custom che permetteva di copiare interi giochi sull'hard disk della console e di lanciarli da lì.
 \subsubsection{Emulatori e software non autorizzato}
-
+L'idea originale di Microsoft era quella di escludere qualsiasi software che non provenisse dal supporto originale o che non fosse autorizzato da Microsoft. Il design prevedeva che il sistema di sicurezza rendesse impossibile installare Linux sulla console, come anche una qualsiasi versione di software senza licenza.\\
+Da un lato, l'idea rendeva il sistema di sicurezza più semplice e riduceva i punti di attacco, ma dall'altro ha triplicato i potenziali attaccanti: nonostante la comunità Open Source, gli sviluppatori \textit{homebrew} e i \textit{cracker} avessero interessi molto diversi tra loro, in questo caso potevano unirsi e attaccare congiuntamente il sistema di sicurezza Xbox.
 \subsubsection{Lazy authentication e verifica non rigorosa}
+Il sistema di sicurezza Xbox prevedeva che la \textit{secret ROM} verificasse l'autenticità del secondo bootloader (\textit{2bl}) prima di eseguirlo: a questo scopo, Microsoft scelse di utilizzare \textit{RC4} sia come algoritmo di decriptazione che come funzione di hash, confrontando gli ultimi 32 bit decifrati con una costante nota.\\
+Tuttavia, RC4 è un cifrario a flusso che decifra ogni byte in modo indipendente: modificare un byte del testo cifrato non compromette la decifratura dei byte successivi. La verifica degli ultimi 32 bit risultava quindi priva di qualsiasi valore -- non esisteva alcun hash reale. Il \textit{2bl} poteva essere modificato arbitrariamente senza che il sistema se ne accorgesse.
 \subsubsection{Cifrature semplici e chiavi corte}
+I vincoli di spazio della \textit{secret ROM} -- grande solo 512 byte -- hanno costretto Microsoft a scegliere algoritmi crittografici estremamente compatti. La scelta ricadde su \textit{RC4} con una chiave a 16 byte, archiviata nella stessa \textit{secret ROM}.\\
+Una chiave così corta, una volta che il bus \textit{HyperTransport} fu sniffato da Huang, risultò immediatamente estraibile. Nella "versione 1.1"\footnote{Chiamata così dalla community di hacker, si trattava di un update della ROM in seguito alla scoperta di Bunnie.} Microsoft aggiunse \textit{TEA} (\textit{Tiny Encryption Algorithm}) come hash, scelto verosimilmente per le sue dimensioni ridotte; tuttavia, come documentato da Schneier in \textit{Applied Cryptography}, TEA non è sicuro se 
+utilizzato come funzione di hash -- invertendo il 16-esimo ed il 31-esimo bit di una parola a 32 bit si ottiene lo stesso valore di hash, rendendo semplicissima la manipolazione del \textit{2bl}.
 
-\end{itemize}
