@@ -1,15 +1,15 @@
 % TODO: sostituire con il titolo effettivo della sezione
 \section{Vulnerabilità Software: Memory Corruption}
 
-Nelle prime generazioni di console, i \textit{Walled Garden} facevano totale affidamento su una singola barriera: la verifica della firma crittografica in ingresso. Una volta superato quel controllo, il software veniva eseguito in un ambiente privo delle moderne mitigazioni a livello di Sistema Operativo. Sfruttando i poteri di un attaccante \textit{MATE}, è stato possibile compromettere la \textit{Chain of Trust} non forzando la crittografia, ma corrompendo lo stato della memoria del programma in esecuzione.
+Nelle prime generazioni di console, i \textit{Walled Garden} facevano totale affidamento su una singola barriera: la verifica della firma crittografica in ingresso. Una volta superato quel controllo, il software veniva eseguito in un ambiente privo delle moderne mitigazioni a livello di sistema operativo. Sfruttando i poteri di un attaccante \textit{MATE}, è stato possibile compromettere la \textit{Chain of Trust} non forzando la crittografia, ma corrompendo lo stato della memoria del programma in esecuzione.
 
 \subsection{Analisi Statica e Dinamica da parte dell'Attaccante}
 
 Per individuare vulnerabilità sfruttabili in un eseguibile chiuso, l'attaccante \textit{MATE} si avvale di tecniche di ingegneria inversa. L'analisi si divide in due macro-categorie:
 
 \begin{itemize}
-    \item \textbf{Analisi Statica}: L'attaccante analizza il codice macchina per ricostruire il \textit{Control Flow Graph} (CFG). In assenza di adeguate tecniche di \textit{Code Obfuscation}, il flusso di controllo risulta facilmente intelligibile tramite strumenti come IDA Pro o Ghidra.
-    \item \textbf{Analisi Dinamica}: Eseguendo il programma in un debugger (es. GDB, OllyDbg), l'attaccante osserva la ''semantica concreta'' del programma, monitorando l'allocazione delle variabili in memoria e i valori dei registri della CPU in tempo reale.
+    \item \textbf{Analisi Statica}: L'attaccante analizza il codice macchina per ricostruire il \textit{Control Flow Graph} (CFG). In assenza di adeguate tecniche di \textit{Code Obfuscation}, il flusso di controllo risulta facilmente intelligibile tramite strumenti (es. IDA Pro o Ghidra).
+    \item \textbf{Analisi Dinamica}: Eseguendo il programma in un debugger (es. GDB), l'attaccante osserva la ''semantica concreta'' del programma, monitorando l'allocazione delle variabili in memoria e i valori dei registri della CPU in tempo reale.
 \end{itemize}
 
 \subsection{Caso Studio: Stack-based Buffer Overflow (Nintendo Wii: ``Twilight Hack'')}
@@ -18,8 +18,8 @@ Il caso di studio più emblematico di questa era è il cosiddetto ``Twilight Hac
 
 \paragraph{La meccanica dell'attacco}
 
-Il programma copiava una stringa di testo (il nome del cavallo dell'avatar) dal file di salvataggio verso un buffer di dimensione fissa allocato sullo \textit{Stack}, senza eseguire alcun controllo sui limiti (\textit{bounds checking}).\\
-Questa tecnica di attacco, fornire in input una stringa intenzionalmente più lunga della capienza del buffer, è stata formalizzata per la prima volta nel 1996 nell'articolo seminale di Aleph One pubblicato su \textit{Phrack Magazine}:
+Il programma copiava una stringa di testo (il nome del cavallo del protagonista) dal file di salvataggio verso un buffer di dimensione fissa allocato sullo \textit{Stack}, senza eseguire alcun controllo sui limiti (termine tecnico: \textit{bounds checking}).\\
+Questa tecnica di attacco, fornire in input una stringa intenzionalmente più lunga della capienza del buffer, è stata formalizzata per la prima volta nel 1996 nell'articolo di Aleph One pubblicato su \textit{Phrack Magazine}:
 
 \begin{quote}
     \textit{``A buffer is simply a contiguous block of computer memory that holds multiple instances of the same data type. [\ldots] To overflow is to flow, or fill over the top, brims, or bounds. We will concern ourselves only with the overflow of dynamic buffers, otherwise known as stack-based buffer overflows.''}\\
@@ -33,7 +33,7 @@ I dati in eccesso invadono le locazioni di memoria adiacenti sullo \textit{Stack
     --- Aleph One, \hyperref[fonte:aleph_one]{\textit{Smashing The Stack For Fun And Profit}}~[\ref{fonte:aleph_one}], 1996
 \end{quote}
 
-Alterando il \textit{Return Pointer}, l'attaccante è riuscito a dirottare il flusso di controllo (\textit{Control Flow Hijacking}) verso un payload malevolo (\textit{Shellcode}) inserito all'interno del finto nome del cavallo.
+Alterando il \textit{Return Pointer}, l'attaccante è riuscito a dirottare il flusso di controllo verso un payload malevolo (\textit{Shellcode}) inserito all'interno del finto nome del cavallo.
 
 \subsection{Assenza di Mitigazioni: ASLR e DEP}
 

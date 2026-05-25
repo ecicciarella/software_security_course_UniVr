@@ -7,14 +7,19 @@ Analizziamo quindi lo stato dell'arte delle tecniche di difesa impiegati dalle p
 
 Il mercato dell'elettronica di consumo si divide storicamente in piattaforme aperte (PC Windows/Linux) e piattaforme chiuse (console, \textit{Set-Top Box}, dispositivi iOS). Una tendenza consolidata mostra che l'apertura delle piattaforme attira un numero maggiore di sviluppatori e consumatori, ma abbassa drasticamente la soglia di competenza richiesta a un attaccante per comprometterle.
 
-Per mantenere il controllo e proteggere la proprietà intellettuale, il cui valore commerciale risiede principalmente nel software e non nell'hardware,ci produttori adottano il paradigma del Dispositivo Chiuso, creando un ecosistema iper-controllato noto come Walled Garden (Giardino Murato). In questo ambiente, il produttore impone vincoli crittografici stringenti affinché l'hardware accetti esclusivamente codice firmato e autorizzato, negando all'utente finale qualsiasi privilegio di amministrazione.
+Per mantenere il controllo e proteggere la proprietà intellettuale, il cui valore commerciale risiede principalmente nel software e non nell'hardware, i produttori adottano il paradigma del Dispositivo Chiuso, creando un ecosistema iper-controllato noto come Walled Garden (tradotto in "Giardino Murato"). In questo ambiente, il produttore impone vincoli crittografici stringenti affinché l'hardware accetti esclusivamente codice firmato e autorizzato, negando all'utente finale qualsiasi privilegio di amministrazione.
 
 \subsection{Dal Modello \textit{Black-Box} al Modello \textit{White-Box}}
 
 La sicurezza informatica classica si fonda su assunzioni crittografiche e attacchi di tipo Black-Box. In tale scenario, si assume che i due attori legittimi (Alice e Bob) abbiano il controllo esclusivo dei propri dispositivi: la minaccia principale è un agente esterno che intercetta i dati in transito (attacco \textit{Man-In-The-Middle}).
 
 Nelle console questa assunzione crolla: ci troviamo di fronte a un modello White-Box in cui l'attaccante coincide con l'utente stesso. Bob possiede fisicamente la macchina e il software di Alice, ribaltando completamente il paradigma difensivo.
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{whitebox-blackbox.png}
+    \caption{Schema concettuale White-Box vs Black-Box}
+    \label{fig:1}
+\end{figure}
 \subsection{L'Attacco MATE (Man-At-The-End)}
 
 Questa specifica minaccia è definita nella letteratura accademica come attacco Man-At-The-End (MATE). In tale scenario, il dispositivo hardware e l'ambiente di esecuzione non sono considerati fidati (\textit{Untrusted}): l'attaccante ha accesso diretto alla macchina e al software in qualsiasi condizione, a prescindere dal fatto che il software sia in esecuzione o meno.
@@ -25,7 +30,16 @@ A causa di questa sproporzione di poteri, l'attaccante MATE gode di capacità ch
 \item Visualizzare e modificare il contenuto della memoria, dei registri e della cache della CPU.
 \item Interrompere l'esecuzione in qualsiasi momento e analizzarla in modo \textit{offline} (tramite \textit{dump} di memoria).
 \item Alterare il codice sorgente o i binari, e collaborare con altri attaccanti per condividere le scoperte.
+\item Fare tutto ciò per quanto tempo vogliono, ogni volta che vogliono, in collusione con quanti altri attaccanti riescono a trovare.
 \end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{MATEschema.png}
+    \caption{Schema concettuale attacco man-at-the-end}
+    \label{fig:2}
+\end{figure}
+
 
 \subsection{La Chain of Trust e la \textit{Root of Trust}}
 
@@ -36,8 +50,15 @@ Poiché il software da solo non può difendersi in un ambiente ostile in cui l'u
 \item Caricamento a cascata verificato: La BootROM verifica la firma digitale del componente successivo (il \textit{Bootloader}) prima di passargli il controllo. Il Bootloader verifica il \textit{Kernel}, e così via fino al gioco.
 \end{enumerate}
 
-\begin{center}
-BootROM  \(\to\)  Bootloader  \(\to\)  Kernel (S.O.)  \(\to\)  Gioco
-\end{center}
+%\begin{center}
+%BootROM  \(\to\)  Bootloader  \(\to\)  Kernel (S.O.)  \(\to\)  Gioco
+%\end{center}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{chainoftrust.png}
+    \caption{Schema concettuale Chain of Trust}
+    \label{fig:3}
+\end{figure}
 
 Se in qualsiasi momento un anello della catena rileva che il codice successivo è stato alterato (\textit{Tampering}), il processo di avvio viene interrotto. L'intero filone dell'\textit{hacking} delle console si basa sul tentativo dell'attaccante MATE di corrompere anche uno solo di questi anelli.
